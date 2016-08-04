@@ -1,9 +1,70 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+	<meta charset="UTF-8">
 	<title>Giphy API</title>
 </head>
 <body>
+<!-- Giphy Select Box -->
+	<form id="giphy-form">
+
+		<!-- Label for Text Box -->
+		<label for="giphy-input">Add A Sport</label>
+
+		<!-- Text Input Box -->
+		<input type="text" id="giphy-input"><br>
+
+		<!-- Submit Button -->
+		<input id="selectGiphy" type="submit" value="Submit!">
+	</form>
+<!-- Spotify Player Goes Here -->
+	<div id="giphyDiv">
+		
+	</div>
+
 
 </body>
+<script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
+<script type="text/javascript">
+	//Initial Array of Sports
+	var sports = ['Soccer', 'Basketball'];
+
+	function getSport(){
+		var sport = $(this).attr('data-name');
+		var queryURL = "http://api.giphy.com/v1/gifs/search?&api_key=dc6zaTOxFJmzC";
+
+		$.ajax({url: queryURL, method: 'GET'})
+		 .done(function(response) {
+		     console.log(response);
+		//creates new div with class of sport
+		var sportDiv = $('<div class="sport">');
+		//retrieves the image data
+		var image = response.image;
+
+
+		});
+
+	};
+
+		// On Button Click for Sport Selection
+	$('#selectGiphy').on('click', function(){
+
+		// Grab the Sport Name
+		var sport = $('#giphy-input').val().trim();
+
+		// Run the Sport Function (Passing in the Sport as an Argument)
+		getSport(sport);
+
+		// Prevents moving to the next page
+		return false;
+	});
+
+
+
+
+
+
+
+</script>
+
 </html>
