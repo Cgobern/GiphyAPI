@@ -1,22 +1,17 @@
 body {font-weight: bold;
-	  background-color: }
+	  background-color: #D3D3D3;}
 
 #sportsButtons {float: left;
-				/*width: 600px;*/
 				width: 60%;
-				margin-top: 25px;}
-
-.addSportButtons {border-radius: 5px;
-				   border: 12px double #FFF;}				
+				margin-top: 25px;}				
 
 label {font-weight: bold;
 	   font-family: tahoma;}
 
 #submissionForm {float: right;
-				 margin-top: 25px;}
+				 margin-top: 25px;
+				 padding-right: 10px;}
 
-#sportPics {clear: both;
-}
 
 button, input[type=submit] {background-color: #008080;
 							color: #FFF;
@@ -32,31 +27,13 @@ input[type=text] {width: 400px;
 				  font-weight: normal;
 				  font-family: Arial;}
 
-.soprtsDiv {display: inline-block;
-			margin: 20px 10px 20px 20px;
-			clear: both;}	
 
-.rating {margin-bottom: 20px;}	
+.rating {margin-bottom: 5px;}	
 
-.jumbotron {text-align: center;
-			width: 80%;
-			margin: 10px auto;
-			border-radius: 4px;
-			color: #008080;
-			font-family: 'Josefin Sans', sans-serif;}
 
 .jumbotron p {color: #000;}	
-
-.addSportPics {border: 3px solid #008080;
-				margin: 100px auto;
-				border-radius: 3px;
-				background-color: #008080;
-				color: #FFF;
-				width: 85%;
-				/*clear: both*/
-				float: left;
-				position: relative;
-				left: 10%;}			
+		
 
 img {width: 200px;
-	 height: 200px}
+	 height: 200px;
+	 margin-bottom: 10px;}
