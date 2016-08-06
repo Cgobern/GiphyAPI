@@ -2,69 +2,44 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
 	<title>Giphy API</title>
 </head>
 <body>
-<!-- Giphy Select Box -->
-	<form id="giphy-form">
-
-		<!-- Label for Text Box -->
-		<label for="giphy-input">Add A Sport</label>
-
-		<!-- Text Input Box -->
-		<input type="text" id="giphy-input"><br>
-
-		<!-- Submit Button -->
-		<input id="selectGiphy" type="submit" value="Submit!">
-	</form>
-<!-- Spotify Player Goes Here -->
-	<div id="giphyDiv">
-		
+<!-- heading div -->
+	<div class = "jumbotron">
+		<h1>Sportsmania</h1>
 	</div>
+	<div class = "container">			
+		<div id = "sportsButtons">
+		</div>
 
+		<div id="submissionForm">
 
+			<p><label for="getSport" id="formLbl">Add an animal</label></p>
+			<p><input type="text" id="getSport"></p>
+			<p><input type="submit" id="submit"></p>
+		</div>
+
+		<!-- div for images and buttons -->
+		
+		<div id="sportPics">
+		</div>	
+
+	</div>	
+	
 </body>
-<script src='http://code.jquery.com/jquery-2.1.3.min.js'></script>
-<script type="text/javascript">
-	//Initial Array of Sports
-	var sports = ['Soccer', 'Basketball'];
-
-	function getSport(){
-		var sport = $(this).attr('data-name');
-		var queryURL = "http://api.giphy.com/v1/gifs/search?&api_key=dc6zaTOxFJmzC";
-
-		$.ajax({url: queryURL, method: 'GET'})
-		 .done(function(response) {
-		     console.log(response);
-		//creates new div with class of sport
-		var sportDiv = $('<div class="sport">');
-		//retrieves the image data
-		var image = response.image;
-
-
-		});
-
-	};
-
-		// On Button Click for Sport Selection
-	$('#selectGiphy').on('click', function(){
-
-		// Grab the Sport Name
-		var sport = $('#giphy-input').val().trim();
-
-		// Run the Sport Function (Passing in the Sport as an Argument)
-		getSport(sport);
-
-		// Prevents moving to the next page
-		return false;
-	});
-
-
-
-
-
-
-
-</script>
+<!--Jquery 2.2.4-->
+<script src='http://code.jquery.com/jquery-2.2.4.min.js'></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Local javascript operations file -->
+<script type="text/javascript" src= "assets/javascript/app.js"></script>
 
 </html>
