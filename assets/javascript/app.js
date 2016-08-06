@@ -29,7 +29,7 @@ var status;
 
 	$("#sportsButtons").on('click', "button", function(){
 
-		apiUrl = "http://api.giphy.com/v1/gifs/search?q=";
+		apiUrl = "https://api.giphy.com/v1/gifs/search?q=";
 		apiUrl = apiUrl+ $(this).attr('data-search') + apiPlus;
 
 		$('#sportPics').empty();
